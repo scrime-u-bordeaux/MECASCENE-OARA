@@ -3,5 +3,8 @@
 export QT_QPA_PLATFORM=wayland 
 export SCORE_AUDIO_BACKEND=dummy
 
+export __NV_PRIME_RENDER_OFFLOAD=1
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+
 exec /home/scrime/ossia/build-sep-2024/build-release/ossia-score --autoplay --no-gui /home/scrime/oara/oara-main.score
 

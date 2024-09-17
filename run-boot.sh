@@ -1,10 +1,14 @@
-#!/bin/sh
+#!/bin/bash
+
+### Wi-Fi ###
+# Setup Wi-Fi network for remote control
+nmcli con up Hotspot
 
 ### Remote control setup ###
 # 1. Open Stage Control
 /home/scrime/open-stage-control/open-stage-control -n --config-file /home/scrime/oara/open-stage-control-config.config &
 
-# 2. Useful log functions
+# 2. Useful log functions that will message open stage control
 log_ok() {
   oscsend localhost 8080 "$1" f 1
 }
@@ -29,23 +33,36 @@ check_process() {
 }
 
 sleep 5
+date
+log_error "/system/lights"
+log_error "/system/screen/1"
+log_error "/system/screen/2"
+log_error "/system/screen/3"
+log_error "/system/ethernet"
+log_error "/system/ip"
+log_error "/system/ravenna"
+log_error "/system/aes67"
+log_error "/system/jack"
+log_error "/system/score"
+
 
 ### Check lights ###
 check_device "/dev/ttyUSB0" "/system/lights"
 
 ### Check screens ###
-xrandr | grep "DP-1-1 connected" && log_ok "/system/screen/1"
-xrandr | grep "DP-1 connected" && log_ok "/system/screen/2"
-xrandr | grep "HDMI-1-0 connected" && log_ok "/system/screen/3"
+xrandr | grep "^DP-1-1 disconnected" && log_error "/system/screen/1"
+xrandr | grep "^DP-1 disconnected" && log_error "/system/screen/2"
+xrandr | grep "^HDMI-1-0 disconnected" && log_error "/system/screen/3"
+xrandr | grep "^DP-1-1 connected" && log_ok "/system/screen/1"
+xrandr | grep "^DP-1 connected" && log_ok "/system/screen/2"
+xrandr | grep "^HDMI-1-0 connected" && log_ok "/system/screen/3"
 
 ### AES67 set-up ###
 THE_DEVICE=enp59s0
 if ip a show dev enp59s0; then
-  echo ...
   THE_DEVICE=enp59s0
   log_ok "/system/ethernet"
 elif ip a show dev enp60s0; then
-  echo ...
   THE_DEVICE=enp60s0
   log_ok "/system/ethernet"
 else
@@ -53,7 +70,7 @@ else
 fi
 
 echo Device: $THE_DEVICE
-THE_IP=$(ip a show dev enp59s0 | grep 169.254.174.241)
+THE_IP=$(ip a show dev $THE_DEVICE | grep 169.254.174.241)
 if [[ "$THE_IP" == "" ]]; then
   log_error "/system/ip"
 #  zenity --warning --text="Erreur: la carte reseau n'est pas configuree correctement. Verifier que le reseau est mis sur 'dante'" --width=400
@@ -96,4 +113,5 @@ sleep 3
 
 check_process ossia-score  "/system/score"
 
+date
 fg
