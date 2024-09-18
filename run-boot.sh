@@ -2,6 +2,7 @@
 
 ### Wi-Fi ###
 # Setup Wi-Fi network for remote control
+nmcli con up dante
 nmcli con up Hotspot
 
 ### Remote control setup ###
@@ -79,18 +80,22 @@ else
   log_ok "/system/ip"
 fi
 
+sudo sysctl -w kernel/sched_rt_runtime_us=1000000
+sudo sysctl -w kernel/perf_cpu_time_max_percent=0
 sudo sysctl -w net.ipv4.igmp_max_memberships=66
 
 sudo insmod /home/scrime/oara/aes67-linux-daemon/3rdparty/ravenna-alsa-lkm/driver/MergingRavennaALSA.ko
 
 lsmod | grep MergingRavennaALSA && log_ok "/system/ravenna"
 
-sudo /usr/sbin/ptp4l -i $THE_DEVICE -l7 -E -S &
+# sudo /usr/sbin/ptp4l -i $THE_DEVICE -l7 -E -S &
+sudo /usr/sbin/ptp4l -i $THE_DEVICE -l6 -E -S -s -m --step_threshold 0.00000001 -4 --priority1 255 --priority2 255
 
 cat /home/scrime/oara/aes67-linux-daemon/test/daemon.conf | sed "s/THE_DEVICE/$THE_DEVICE/g" >  /home/scrime/oara/aes67-linux-daemon/test/daemon-$THE_DEVICE.conf
 
 sleep 10
 
+cd /home/scrime/oara/aes67-linux-daemon/
 /home/scrime/oara/aes67-linux-daemon/daemon/aes67-daemon -c /home/scrime/oara/aes67-linux-daemon/test/daemon-$THE_DEVICE.conf &
 
 sleep 10
@@ -98,7 +103,7 @@ sleep 10
 check_process aes67-daemon "/system/aes67"
 
 ### Start JACK ###
-jackd -S  -d alsa -r 48000 -C none -P plughw:RAVENNA -p 48 -n 1 -i 0 -o 48 &
+jackd -S  -d alsa -r 48000 -C none -P plughw:RAVENNA -p 64 -n 1 -i 0 -o 50 &
 
 sleep 5
 
