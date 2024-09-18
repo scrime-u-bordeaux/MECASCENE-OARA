@@ -83,7 +83,7 @@
     "dscp": 34,
     "refclk_ptp_traceable": false,
     "map": [ 40, 41, 42, 43, 44, 45, 46, 47 ]
-  }, 
+  },
   {
     "id": 6,
     "enabled": true,
@@ -97,6 +97,7 @@
     "dscp": 34,
     "refclk_ptp_traceable": false,
     "map": [ 48, 49 ]
-  }  ],
+  }
+  ],
   "sinks": [  ]
 }
