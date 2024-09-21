@@ -1,5 +1,9 @@
 #!/bin/bash
 
+sudo cpupower frequency-set -g performance
+### Screen ###
+xset s off -dpms
+
 ### Wi-Fi ###
 # Setup Wi-Fi network for remote control
 nmcli con up dante
@@ -89,7 +93,7 @@ sudo insmod /home/scrime/oara/aes67-linux-daemon/3rdparty/ravenna-alsa-lkm/drive
 lsmod | grep MergingRavennaALSA && log_ok "/system/ravenna"
 
 # sudo /usr/sbin/ptp4l -i $THE_DEVICE -l7 -E -S &
-sudo /usr/sbin/ptp4l -i $THE_DEVICE -l6 -E -S -s -m --step_threshold 0.00000001 -4 --priority1 255 --priority2 255
+sudo /usr/sbin/ptp4l -i $THE_DEVICE -l6 -E -S -s -m --step_threshold 0.00000001 -4 --priority1 255 --priority2 255 &
 
 cat /home/scrime/oara/aes67-linux-daemon/test/daemon.conf | sed "s/THE_DEVICE/$THE_DEVICE/g" >  /home/scrime/oara/aes67-linux-daemon/test/daemon-$THE_DEVICE.conf
 
@@ -106,6 +110,7 @@ check_process aes67-daemon "/system/aes67"
 jackd -S  -d alsa -r 48000 -C none -P plughw:RAVENNA -p 64 -n 1 -i 0 -o 50 &
 
 sleep 5
+qjackctl &
 
 check_process jackd "/system/jack"
 
@@ -119,4 +124,6 @@ sleep 3
 check_process ossia-score  "/system/score"
 
 date
+
+oscsend 127.0.0.1 9000 /test T
 fg

@@ -1,0 +1,308 @@
+<!DOCTYPE qjackctlSession>
+<session name="jack-setup">
+ <client name="ossia score">
+  <port name="out_0" type="out">
+   <connect client="system" port="playback_45"/>
+  </port>
+  <port name="out_1" type="out">
+   <connect client="system" port="playback_46"/>
+  </port>
+  <port name="out_2" type="out">
+   <connect client="system" port="playback_47"/>
+  </port>
+  <port name="out_3" type="out">
+   <connect client="system" port="playback_48"/>
+  </port>
+  <port name="out_4" type="out">
+   <connect client="system" port="playback_16"/>
+  </port>
+  <port name="out_5" type="out">
+   <connect client="system" port="playback_34"/>
+  </port>
+  <port name="out_6" type="out">
+   <connect client="system" port="playback_49"/>
+  </port>
+  <port name="out_7" type="out">
+   <connect client="system" port="playback_50"/>
+  </port>
+  <port name="out_8" type="out">
+   <connect client="system" port="playback_9"/>
+  </port>
+  <port name="out_9" type="out">
+   <connect client="system" port="playback_10"/>
+  </port>
+  <port name="out_10" type="out">
+   <connect client="system" port="playback_11"/>
+  </port>
+  <port name="out_11" type="out">
+   <connect client="system" port="playback_12"/>
+  </port>
+  <port name="out_12" type="out">
+   <connect client="system" port="playback_13"/>
+  </port>
+  <port name="out_13" type="out">
+   <connect client="system" port="playback_14"/>
+  </port>
+  <port name="out_14" type="out">
+   <connect client="system" port="playback_15"/>
+  </port>
+  <port name="out_15" type="out">
+   <connect client="system" port="playback_44"/>
+  </port>
+  <port name="out_16" type="out">
+   <connect client="system" port="playback_43"/>
+  </port>
+  <port name="out_17" type="out">
+   <connect client="system" port="playback_42"/>
+  </port>
+  <port name="out_18" type="out">
+   <connect client="system" port="playback_41"/>
+  </port>
+  <port name="out_19" type="out">
+   <connect client="system" port="playback_40"/>
+  </port>
+  <port name="out_20" type="out">
+   <connect client="system" port="playback_39"/>
+  </port>
+  <port name="out_21" type="out">
+   <connect client="system" port="playback_38"/>
+  </port>
+  <port name="out_22" type="out">
+   <connect client="system" port="playback_35"/>
+  </port>
+  <port name="out_23" type="out">
+   <connect client="system" port="playback_36"/>
+  </port>
+  <port name="out_24" type="out">
+   <connect client="system" port="playback_17"/>
+  </port>
+  <port name="out_25" type="out">
+   <connect client="system" port="playback_25"/>
+  </port>
+  <port name="out_26" type="out">
+   <connect client="system" port="playback_18"/>
+  </port>
+  <port name="out_27" type="out">
+   <connect client="system" port="playback_26"/>
+  </port>
+  <port name="out_28" type="out">
+   <connect client="system" port="playback_19"/>
+  </port>
+  <port name="out_29" type="out">
+   <connect client="system" port="playback_27"/>
+  </port>
+  <port name="out_30" type="out">
+   <connect client="system" port="playback_20"/>
+  </port>
+  <port name="out_31" type="out">
+   <connect client="system" port="playback_28"/>
+  </port>
+  <port name="out_32" type="out">
+   <connect client="system" port="playback_21"/>
+  </port>
+  <port name="out_33" type="out">
+   <connect client="system" port="playback_29"/>
+  </port>
+  <port name="out_34" type="out">
+   <connect client="system" port="playback_22"/>
+  </port>
+  <port name="out_35" type="out">
+   <connect client="system" port="playback_30"/>
+  </port>
+  <port name="out_36" type="out">
+   <connect client="system" port="playback_23"/>
+  </port>
+  <port name="out_37" type="out">
+   <connect client="system" port="playback_31"/>
+  </port>
+  <port name="out_38" type="out">
+   <connect client="system" port="playback_24"/>
+  </port>
+  <port name="out_39" type="out">
+   <connect client="system" port="playback_32"/>
+  </port>
+  <port name="out_40" type="out">
+   <connect client="system" port="playback_5"/>
+  </port>
+  <port name="out_41" type="out">
+   <connect client="system" port="playback_7"/>
+  </port>
+  <port name="out_42" type="out">
+   <connect client="system" port="playback_6"/>
+  </port>
+  <port name="out_43" type="out">
+   <connect client="system" port="playback_8"/>
+  </port>
+  <port name="out_44" type="out">
+   <connect client="system" port="playback_1"/>
+  </port>
+  <port name="out_45" type="out">
+   <connect client="system" port="playback_3"/>
+  </port>
+  <port name="out_46" type="out">
+   <connect client="system" port="playback_2"/>
+  </port>
+  <port name="out_47" type="out">
+   <connect client="system" port="playback_4"/>
+  </port>
+  <port name="out_48" type="out">
+   <connect client="system" port="playback_33"/>
+  </port>
+  <port name="out_49" type="out">
+   <connect client="system" port="playback_37"/>
+  </port>
+ </client>
+ <client name="system">
+  <port name="playback_1" type="in">
+   <connect client="ossia score" port="out_44"/>
+  </port>
+  <port name="playback_2" type="in">
+   <connect client="ossia score" port="out_46"/>
+  </port>
+  <port name="playback_3" type="in">
+   <connect client="ossia score" port="out_45"/>
+  </port>
+  <port name="playback_4" type="in">
+   <connect client="ossia score" port="out_47"/>
+  </port>
+  <port name="playback_5" type="in">
+   <connect client="ossia score" port="out_40"/>
+  </port>
+  <port name="playback_6" type="in">
+   <connect client="ossia score" port="out_42"/>
+  </port>
+  <port name="playback_7" type="in">
+   <connect client="ossia score" port="out_41"/>
+  </port>
+  <port name="playback_8" type="in">
+   <connect client="ossia score" port="out_43"/>
+  </port>
+  <port name="playback_9" type="in">
+   <connect client="ossia score" port="out_8"/>
+  </port>
+  <port name="playback_10" type="in">
+   <connect client="ossia score" port="out_9"/>
+  </port>
+  <port name="playback_11" type="in">
+   <connect client="ossia score" port="out_10"/>
+  </port>
+  <port name="playback_12" type="in">
+   <connect client="ossia score" port="out_11"/>
+  </port>
+  <port name="playback_13" type="in">
+   <connect client="ossia score" port="out_12"/>
+  </port>
+  <port name="playback_14" type="in">
+   <connect client="ossia score" port="out_13"/>
+  </port>
+  <port name="playback_15" type="in">
+   <connect client="ossia score" port="out_14"/>
+  </port>
+  <port name="playback_16" type="in">
+   <connect client="ossia score" port="out_4"/>
+  </port>
+  <port name="playback_17" type="in">
+   <connect client="ossia score" port="out_24"/>
+  </port>
+  <port name="playback_18" type="in">
+   <connect client="ossia score" port="out_26"/>
+  </port>
+  <port name="playback_19" type="in">
+   <connect client="ossia score" port="out_28"/>
+  </port>
+  <port name="playback_20" type="in">
+   <connect client="ossia score" port="out_30"/>
+  </port>
+  <port name="playback_21" type="in">
+   <connect client="ossia score" port="out_32"/>
+  </port>
+  <port name="playback_22" type="in">
+   <connect client="ossia score" port="out_34"/>
+  </port>
+  <port name="playback_23" type="in">
+   <connect client="ossia score" port="out_36"/>
+  </port>
+  <port name="playback_24" type="in">
+   <connect client="ossia score" port="out_38"/>
+  </port>
+  <port name="playback_25" type="in">
+   <connect client="ossia score" port="out_25"/>
+  </port>
+  <port name="playback_26" type="in">
+   <connect client="ossia score" port="out_27"/>
+  </port>
+  <port name="playback_27" type="in">
+   <connect client="ossia score" port="out_29"/>
+  </port>
+  <port name="playback_28" type="in">
+   <connect client="ossia score" port="out_31"/>
+  </port>
+  <port name="playback_29" type="in">
+   <connect client="ossia score" port="out_33"/>
+  </port>
+  <port name="playback_30" type="in">
+   <connect client="ossia score" port="out_35"/>
+  </port>
+  <port name="playback_31" type="in">
+   <connect client="ossia score" port="out_37"/>
+  </port>
+  <port name="playback_32" type="in">
+   <connect client="ossia score" port="out_39"/>
+  </port>
+  <port name="playback_33" type="in">
+   <connect client="ossia score" port="out_48"/>
+  </port>
+  <port name="playback_34" type="in">
+   <connect client="ossia score" port="out_5"/>
+  </port>
+  <port name="playback_35" type="in">
+   <connect client="ossia score" port="out_22"/>
+  </port>
+  <port name="playback_36" type="in">
+   <connect client="ossia score" port="out_23"/>
+  </port>
+  <port name="playback_37" type="in">
+   <connect client="ossia score" port="out_49"/>
+  </port>
+  <port name="playback_38" type="in">
+   <connect client="ossia score" port="out_21"/>
+  </port>
+  <port name="playback_39" type="in">
+   <connect client="ossia score" port="out_20"/>
+  </port>
+  <port name="playback_40" type="in">
+   <connect client="ossia score" port="out_19"/>
+  </port>
+  <port name="playback_41" type="in">
+   <connect client="ossia score" port="out_18"/>
+  </port>
+  <port name="playback_42" type="in">
+   <connect client="ossia score" port="out_17"/>
+  </port>
+  <port name="playback_43" type="in">
+   <connect client="ossia score" port="out_16"/>
+  </port>
+  <port name="playback_44" type="in">
+   <connect client="ossia score" port="out_15"/>
+  </port>
+  <port name="playback_45" type="in">
+   <connect client="ossia score" port="out_0"/>
+  </port>
+  <port name="playback_46" type="in">
+   <connect client="ossia score" port="out_1"/>
+  </port>
+  <port name="playback_47" type="in">
+   <connect client="ossia score" port="out_2"/>
+  </port>
+  <port name="playback_48" type="in">
+   <connect client="ossia score" port="out_3"/>
+  </port>
+  <port name="playback_49" type="in">
+   <connect client="ossia score" port="out_6"/>
+  </port>
+  <port name="playback_50" type="in">
+   <connect client="ossia score" port="out_7"/>
+  </port>
+ </client>
+</session>
+
