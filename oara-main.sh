@@ -6,4 +6,4 @@ export SCORE_AUDIO_BACKEND=jack
 export __NV_PRIME_RENDER_OFFLOAD=1
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
 
-exec /home/scrime/ossia/build-sep-2024/build-release/ossia-score  --no-restore /home/scrime/oara/filage-20-09-aprem.score --autoplay --no-gui
+exec /home/scrime/ossia/build-sep-2024/build-release/ossia-score  --no-restore /home/scrime/oara/21-09-2024.score --autoplay --no-gui

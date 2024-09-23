@@ -1,10 +1,10 @@
 #!/bin/bash
 
 export QT_QPA_PLATFORM=xcb 
-export SCORE_AUDIO_BACKEND=jack
+export SCORE_AUDIO_BACKEND=dummy
 
 export __NV_PRIME_RENDER_OFFLOAD=1
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
 
-exec /home/scrime/ossia/build-sep-2024/build-release/ossia-score /home/scrime/oara/filage-20-09-aprem.score
+exec /home/scrime/ossia/build-sep-2024/build-release/ossia-score
 

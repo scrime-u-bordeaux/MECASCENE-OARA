@@ -1,6 +1,10 @@
 #!/bin/bash
 
 sudo cpupower frequency-set -g performance
+sudo cpupower frequency-set -d 2500MHz
+sudo cpupower frequency-set -u 2500MHz
+sudo cpupower frequency-set -f 2500MHz
+
 ### Screen ###
 xset s off -dpms
 
@@ -97,24 +101,24 @@ sudo /usr/sbin/ptp4l -i $THE_DEVICE -l6 -E -S -s -m --step_threshold 0.00000001 
 
 cat /home/scrime/oara/aes67-linux-daemon/test/daemon.conf | sed "s/THE_DEVICE/$THE_DEVICE/g" >  /home/scrime/oara/aes67-linux-daemon/test/daemon-$THE_DEVICE.conf
 
-sleep 10
+# sleep 10
 
 cd /home/scrime/oara/aes67-linux-daemon/
 /home/scrime/oara/aes67-linux-daemon/daemon/aes67-daemon -c /home/scrime/oara/aes67-linux-daemon/test/daemon-$THE_DEVICE.conf &
 
-sleep 10
+# sleep 10
 
-check_process aes67-daemon "/system/aes67"
+# check_process aes67-daemon "/system/aes67"
 
 ### Start JACK ###
-jackd -S  -d alsa -r 48000 -C none -P plughw:RAVENNA -p 64 -n 1 -i 0 -o 50 &
+jackd -S  -d alsa -r 48000 -C none -P plughw:RAVENNA -p 64 -n 2 -i 0 -o 50 &
 
-sleep 5
+# sleep 5
 qjackctl &
 
 check_process jackd "/system/jack"
 
-sleep 1
+# sleep 1
 
 ### Start show control ###
 QT_QPA_PLATFORM=minimal SCORE_AUDIO_BACKEND=dummy /home/scrime/ossia/build-sep-2024/build-release/ossia-score /home/scrime/oara/phone-control-entrypoint.score --autoplay --no-gui &
@@ -125,5 +129,8 @@ check_process ossia-score  "/system/score"
 
 date
 
+firefox http://localhost:8080 &
+
 oscsend 127.0.0.1 9000 /test T
+
 fg

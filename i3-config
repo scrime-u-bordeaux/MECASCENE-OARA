@@ -30,6 +30,8 @@ font pango:monospace 8
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 # exec --no-startup-id nm-applet
 
+exec --no-startup-id pcmanfm-qt --desktop
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
@@ -186,6 +188,17 @@ assign [class="vp3"] 4
 assign [title="vp1"] 2
 assign [title="vp2"] 3
 assign [title="vp3"] 4
+
+assign [title="*QJackCtl"] 10
+assign [class="qjackctl"] 10
+assign [class="Qjackctl"] 10
+assign [class="QjackCtl"] 10
+assign [title="pcmanfm-desktop0"] 1
+
+for_window[class="qjackctl"] floating enable
+for_window[class="QjackCtl"] floating enable
+for_window[class="firefox"] floating enable
+for_window[class="Navigator"] floating enable
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
