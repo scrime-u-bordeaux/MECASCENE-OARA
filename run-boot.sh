@@ -121,7 +121,7 @@ check_process jackd "/system/jack"
 # sleep 1
 
 ### Start show control ###
-QT_QPA_PLATFORM=minimal SCORE_AUDIO_BACKEND=dummy /home/scrime/ossia/build-sep-2024/build-release/ossia-score /home/scrime/oara/phone-control-entrypoint.score --autoplay --no-gui &
+QT_QPA_PLATFORM=minimal SCORE_AUDIO_BACKEND=dummy "/Applications/ossia score.app/Contents/MacOS/ossia score" /home/scrime/oara/phone-control-entrypoint.score --autoplay --no-gui &
 
 sleep 3
 
