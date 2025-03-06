@@ -15,6 +15,7 @@ displayplacer "id:AEE4E9EB-105B-4F42-9219-AB2BDA16EE83 res:1920x1080 hz:60 color
 
 
 ### Remote control setup ###
+sleep 5
 # 1. Open Stage Control
 /Applications/open-stage-control.app/Contents/MacOS/open-stage-control -n --config-file /Users/Metascene/oara/open-stage-control-config.config &
 
@@ -64,18 +65,10 @@ check_device "/dev/cu.usbserial-EN217349" "/system/lights"
 ### AES67 set-up ###
 
 ### Start show control ###
-sleep 3
+sleep 5
 open http://localhost:8080 
 
 export QT_QPA_PLATFORM=cocoa
 export SCORE_AUDIO_BACKEND=dummy 
 exec "/Applications/ossia score.app/Contents/MacOS/ossia score" /Users/Metascene/oara/phone-control-entrypoint.score --autoplay --no-gui 
 
-sleep 3
-
-check_process ossia-score  "/system/score"
-
-
-oscsend 127.0.0.1 9000 /test T
-
-fg
