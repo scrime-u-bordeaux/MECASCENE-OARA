@@ -220,7 +220,7 @@
       },
       {
         "type": "text",
-        "top": 660,
+        "top": 630,
         "left": 0,
         "lock": false,
         "id": "text_3",
@@ -257,7 +257,7 @@
       },
       {
         "type": "fader",
-        "top": 680,
+        "top": 650,
         "left": 10,
         "lock": false,
         "id": "fader_vol",
@@ -313,7 +313,7 @@
       },
       {
         "type": "text",
-        "top": 750,
+        "top": 720,
         "left": 0,
         "lock": false,
         "id": "text_status",
@@ -350,7 +350,7 @@
       },
       {
         "type": "text",
-        "top": 790,
+        "top": 760,
         "left": 10,
         "lock": false,
         "id": "text_4",
@@ -387,7 +387,7 @@
       },
       {
         "type": "led",
-        "top": 790,
+        "top": 760,
         "left": 270,
         "lock": false,
         "id": "led_1",
@@ -430,7 +430,7 @@
       },
       {
         "type": "text",
-        "top": 830,
+        "top": 800,
         "left": 10,
         "lock": false,
         "id": "text_5",
@@ -467,7 +467,7 @@
       },
       {
         "type": "text",
-        "top": 910,
+        "top": 880,
         "left": 10,
         "lock": false,
         "id": "text_6",
@@ -504,7 +504,7 @@
       },
       {
         "type": "text",
-        "top": 870,
+        "top": 840,
         "left": 10,
         "lock": false,
         "id": "text_7",
@@ -541,7 +541,7 @@
       },
       {
         "type": "led",
-        "top": 830,
+        "top": 800,
         "left": 150,
         "lock": false,
         "id": "led_21",
@@ -584,7 +584,7 @@
       },
       {
         "type": "led",
-        "top": 870,
+        "top": 840,
         "left": 150,
         "lock": false,
         "id": "led_3",
@@ -627,7 +627,7 @@
       },
       {
         "type": "led",
-        "top": 910,
+        "top": 880,
         "left": 150,
         "lock": false,
         "id": "led_4",
@@ -670,7 +670,7 @@
       },
       {
         "type": "led",
-        "top": 790,
+        "top": 760,
         "left": 310,
         "lock": false,
         "id": "led_10",
@@ -713,7 +713,7 @@
       },
       {
         "type": "led",
-        "top": 830,
+        "top": 800,
         "left": 190,
         "lock": false,
         "id": "led_31",
@@ -756,7 +756,7 @@
       },
       {
         "type": "led",
-        "top": 830,
+        "top": 800,
         "left": 230,
         "lock": false,
         "id": "led_41",
@@ -799,7 +799,7 @@
       },
       {
         "type": "led",
-        "top": 790,
+        "top": 760,
         "left": 190,
         "lock": false,
         "id": "led_eth",
@@ -842,7 +842,7 @@
       },
       {
         "type": "led",
-        "top": 790,
+        "top": 760,
         "left": 230,
         "lock": false,
         "id": "led_ip",
@@ -885,7 +885,7 @@
       },
       {
         "type": "led",
-        "top": 790,
+        "top": 760,
         "left": 150,
         "lock": false,
         "id": "led_module",
@@ -1003,7 +1003,7 @@
         "on": 1,
         "off": 0,
         "mode": "tap",
-        "doubleTap": false,
+        "doubleTap": true,
         "decoupled": false,
         "value": 0,
         "default": 0,
@@ -1202,7 +1202,7 @@
         "visible": true,
         "comments": "",
         "width": 360,
-        "height": 80,
+        "height": 60,
         "expand": "false",
         "colorText": "auto",
         "colorWidget": "auto",
@@ -1219,7 +1219,7 @@
         "vertical": false,
         "wrap": false,
         "align": "top",
-        "value": "TIMECODE",
+        "value": "",
         "default": "",
         "linkId": "",
         "address": "auto",
@@ -1232,14 +1232,14 @@
       },
       {
         "type": "text",
-        "top": 600,
-        "left": 40,
+        "top": 580,
+        "left": 10,
         "lock": false,
         "id": "text_2",
         "visible": true,
         "comments": "",
-        "width": 270,
-        "height": 40,
+        "width": 340,
+        "height": 30,
         "expand": false,
         "colorText": "auto",
         "colorWidget": "auto",
@@ -1251,8 +1251,8 @@
         "lineWidth": "auto",
         "borderRadius": "auto",
         "padding": "auto",
-        "html": "",
-        "css": "",
+        "html": "VAR{tc}",
+        "css": "font-size: 40px;",
         "vertical": false,
         "wrap": false,
         "align": "center",
@@ -1265,7 +1265,7 @@
         "target": "",
         "bypass": false,
         "onCreate": "",
-        "onValue": ""
+        "onValue": "\n      let seconds  = value;\n      let mm = Math.floor(seconds / 60);\n      seconds  = seconds - 60. * mm;\n      let  ss = Math.floor(seconds);\n      let mmm = (seconds - ss).toFixed(3) * 1000;\n    setVar(\"this\",\"tc\", `00:${(\"00\"+mm).slice(-2)}:${(\"00\" + ss).slice(-2)}`);"
       }
     ],
     "tabs": []

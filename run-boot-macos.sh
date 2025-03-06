@@ -66,9 +66,12 @@ check_device "/dev/cu.usbserial-EN217349" "/system/lights"
 
 ### Start show control ###
 sleep 5
-open http://localhost:8080 
+#open http://localhost:8080 
 
 export QT_QPA_PLATFORM=cocoa
 export SCORE_AUDIO_BACKEND=dummy 
+export SCORE_DISABLE_AUDIOPLUGINS=1
+export SCORE_DISABLE_LV2=1
+export SCORE_DISABLE_LIBRARY=1
 exec "/Applications/ossia score.app/Contents/MacOS/ossia score" /Users/Metascene/oara/phone-control-entrypoint.score --autoplay --no-gui 
 
