@@ -1,0 +1,45 @@
+Metascene
+
+TODOs: 
+- [x] Installer openstagecontrol (ça demande rosetta et le mdp)
+- [x] Faire un script qui active et désactive les autostart
+- [x] Rajouter le contrôle de ce script à open stage control
+    - [ ] METASCENE
+- [x] Rapatrier données de film & audio sur le ssd interne depuis le laptop Dell
+- [x] Mettre à jour le score pour utiliser le bon port série pour le contrôle dmx
+- [x] Config ossia pour utiliser la carte son DVS
+- [x] Vérifier stabilité du positionnement auto des écrans sur Mac 
+
+- [x] Mettre à jour tous les scripts qui pointaient vers /home/scrime/oara pour rediriger vers /Users/Metascene/MECASCENE-OARA 
+    - [x] Tous les fichiers sont dans le dépôt git /Users/Metascene/MECASCENE-OARA
+- [x] Activer Hotspot wifi depuis le Mac Studio
+- [x] Désactiver veille / autolock
+    - [ ] Dans settings
+- [x] Black wallpaper
+    - [ ] From script
+- [x] Désactiver App Nap
+- [x] Désctiveer opowernap
+- [x] Autoboot hotspot wifi
+    - [ ] Documenter comment le réactiver
+- [x] Disable privacy indicator
+    - [x] En recovery mode
+    - [x] https://support.apple.com/en-gb/118449
+- [x] 12 30 checker lag dans vidéo milieu
+    - [x] Fait partie de la vidéo
+- [x] Strobes qui partent au début
+    - [x] Mettre à preset 0
+- [x] Sauvegarder avec fullscreen off
+
+
+- [x] 14 minutes : baisser lumière
+- [x] Balustrades à aligner à 22 50
+- [x] Désactiver sleep dans settings macOS
+- [ ] Désactiver night shift
+- [x] Sudo   pmset disablesleep 1 
+- [x] Sudo pmset powernap 0
+- [x] checkécrans ycbcr et hdmi level 
+- [ ] Vérifier input micro se remet bien sur null
+- [ ] Timecode monitoring
+
+displayplacer "id:AEE4E9EB-105B-4F42-9219-AB2BDA16EE83 res:1920x1080 hz:60 color_depth:8 enabled:true scaling:on origin:(0,0) degree:0" "id:818EDFCA-73FA-4545-BA90-6D105A528D5F res:1920x1080 hz:50 color_depth:8 enabled:true scaling:off origin:(1920,0) degree:0" "id:60246636-E052-4369-8A21-3955D3E5D59F res:1920x1080 hz:50 color_depth:8 enabled:true scaling:off origin:(3840,0) degree:0" "id:8EFCB739-A601-4509-8191-C4BA0789960B res:1920x1080 hz:50 color_depth:8 enabled:true scaling:off origin:(5760,0) degree:0"
+
