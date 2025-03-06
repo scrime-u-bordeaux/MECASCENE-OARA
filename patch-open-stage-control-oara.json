@@ -1,6 +1,6 @@
 {
   "createdWith": "Open Stage Control",
-  "version": "1.27.0",
+  "version": "1.27.5",
   "type": "session",
   "content": {
     "type": "root",
@@ -69,7 +69,7 @@
         "vertical": false,
         "wrap": false,
         "align": "top",
-        "value": "TRANSPORT",
+        "value": "TRANSPORT\n(double clic!)",
         "default": "",
         "linkId": "",
         "address": "auto",
@@ -77,7 +77,8 @@
         "decimals": 2,
         "target": "",
         "onCreate": "",
-        "onValue": ""
+        "onValue": "",
+        "bypass": false
       },
       {
         "type": "button",
@@ -251,7 +252,8 @@
         "decimals": 2,
         "target": "",
         "onCreate": "",
-        "onValue": ""
+        "onValue": "",
+        "bypass": false
       },
       {
         "type": "fader",
@@ -343,7 +345,8 @@
         "decimals": 2,
         "target": "",
         "onCreate": "",
-        "onValue": ""
+        "onValue": "",
+        "bypass": false
       },
       {
         "type": "text",
@@ -379,7 +382,8 @@
         "decimals": 2,
         "target": "",
         "onCreate": "",
-        "onValue": ""
+        "onValue": "",
+        "bypass": false
       },
       {
         "type": "led",
@@ -421,7 +425,8 @@
         "preArgs": "",
         "target": "",
         "onCreate": "",
-        "onValue": ""
+        "onValue": "",
+        "bypass": false
       },
       {
         "type": "text",
@@ -457,7 +462,8 @@
         "decimals": 2,
         "target": "",
         "onCreate": "",
-        "onValue": ""
+        "onValue": "",
+        "bypass": false
       },
       {
         "type": "text",
@@ -493,7 +499,8 @@
         "decimals": 2,
         "target": "",
         "onCreate": "",
-        "onValue": ""
+        "onValue": "",
+        "bypass": false
       },
       {
         "type": "text",
@@ -529,7 +536,8 @@
         "decimals": 2,
         "target": "",
         "onCreate": "",
-        "onValue": ""
+        "onValue": "",
+        "bypass": false
       },
       {
         "type": "led",
@@ -571,7 +579,8 @@
         "preArgs": "",
         "target": "",
         "onCreate": "",
-        "onValue": ""
+        "onValue": "",
+        "bypass": false
       },
       {
         "type": "led",
@@ -613,7 +622,8 @@
         "preArgs": "",
         "target": "",
         "onCreate": "",
-        "onValue": ""
+        "onValue": "",
+        "bypass": false
       },
       {
         "type": "led",
@@ -655,7 +665,8 @@
         "preArgs": "",
         "target": "",
         "onCreate": "",
-        "onValue": ""
+        "onValue": "",
+        "bypass": false
       },
       {
         "type": "led",
@@ -697,7 +708,8 @@
         "preArgs": "",
         "target": "",
         "onCreate": "",
-        "onValue": ""
+        "onValue": "",
+        "bypass": false
       },
       {
         "type": "led",
@@ -739,7 +751,8 @@
         "preArgs": "",
         "target": "",
         "onCreate": "",
-        "onValue": ""
+        "onValue": "",
+        "bypass": false
       },
       {
         "type": "led",
@@ -781,7 +794,8 @@
         "preArgs": "",
         "target": "",
         "onCreate": "",
-        "onValue": ""
+        "onValue": "",
+        "bypass": false
       },
       {
         "type": "led",
@@ -823,7 +837,8 @@
         "preArgs": "",
         "target": "",
         "onCreate": "",
-        "onValue": ""
+        "onValue": "",
+        "bypass": false
       },
       {
         "type": "led",
@@ -865,7 +880,8 @@
         "preArgs": "",
         "target": "",
         "onCreate": "",
-        "onValue": ""
+        "onValue": "",
+        "bypass": false
       },
       {
         "type": "led",
@@ -907,7 +923,8 @@
         "preArgs": "",
         "target": "",
         "onCreate": "",
-        "onValue": ""
+        "onValue": "",
+        "bypass": false
       },
       {
         "type": "button",
@@ -918,7 +935,7 @@
         "visible": true,
         "interaction": true,
         "comments": "",
-        "width": 300,
+        "width": 130,
         "height": 70,
         "expand": "false",
         "colorText": "auto",
@@ -934,7 +951,7 @@
         "html": "",
         "css": "",
         "colorTextOn": "auto",
-        "label": "1. PRESENTATION",
+        "label": "1. SHOW",
         "vertical": false,
         "wrap": false,
         "on": 1,
@@ -980,7 +997,7 @@
         "html": "",
         "css": "",
         "colorTextOn": "auto",
-        "label": "2. VIDEO",
+        "label": "2. LANCER VIDEO",
         "vertical": false,
         "wrap": false,
         "on": 1,
@@ -1026,13 +1043,13 @@
         "html": "",
         "css": "",
         "colorTextOn": "auto",
-        "label": "TEST",
+        "label": "TEST DES ECRANS",
         "vertical": false,
         "wrap": false,
         "on": 0,
         "off": 1,
         "mode": "tap",
-        "doubleTap": false,
+        "doubleTap": true,
         "decoupled": false,
         "value": 0,
         "default": 0,
@@ -1072,7 +1089,7 @@
         "html": "",
         "css": "",
         "colorTextOn": "auto",
-        "label": "3. MEDIATION",
+        "label": "3. MEDIATION APRES SHOW",
         "vertical": false,
         "wrap": false,
         "on": 1,
@@ -1089,6 +1106,89 @@
         "decimals": 2,
         "target": "",
         "ignoreDefaults": false,
+        "bypass": false,
+        "onCreate": "",
+        "onValue": ""
+      },
+      {
+        "type": "button",
+        "top": 90,
+        "left": 200,
+        "lock": false,
+        "id": "pedago",
+        "visible": true,
+        "interaction": true,
+        "comments": "",
+        "width": 130,
+        "height": 70,
+        "expand": "false",
+        "colorText": "auto",
+        "colorWidget": "auto",
+        "colorStroke": "auto",
+        "colorFill": "auto",
+        "alphaStroke": "auto",
+        "alphaFillOff": "auto",
+        "alphaFillOn": "auto",
+        "lineWidth": "auto",
+        "borderRadius": "auto",
+        "padding": "auto",
+        "html": "",
+        "css": "",
+        "colorTextOn": "auto",
+        "label": "1. PEDAGO",
+        "vertical": false,
+        "wrap": false,
+        "on": 1,
+        "off": 0,
+        "mode": "tap",
+        "doubleTap": true,
+        "decoupled": false,
+        "value": "",
+        "default": "",
+        "linkId": "",
+        "address": "/pedago",
+        "preArgs": "",
+        "typeTags": "",
+        "decimals": 2,
+        "target": "",
+        "ignoreDefaults": false,
+        "bypass": false,
+        "onCreate": "",
+        "onValue": "fader_light.value = 0;\nfader_vol.value = 1;"
+      },
+      {
+        "type": "text",
+        "top": 110,
+        "left": 160,
+        "lock": false,
+        "id": "text_8",
+        "visible": true,
+        "comments": "",
+        "width": 40,
+        "height": 30,
+        "expand": false,
+        "colorText": "auto",
+        "colorWidget": "auto",
+        "colorStroke": "auto",
+        "colorFill": "auto",
+        "alphaStroke": "auto",
+        "alphaFillOff": "auto",
+        "alphaFillOn": "auto",
+        "lineWidth": "auto",
+        "borderRadius": "auto",
+        "padding": "auto",
+        "html": "ou",
+        "css": "",
+        "vertical": false,
+        "wrap": false,
+        "align": "center",
+        "value": "",
+        "default": "",
+        "linkId": "",
+        "address": "auto",
+        "preArgs": "",
+        "decimals": 2,
+        "target": "",
         "bypass": false,
         "onCreate": "",
         "onValue": ""
