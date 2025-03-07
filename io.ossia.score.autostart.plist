@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+        <dict>
+                <key>EnvironmentVariables</key>
+                <dict>
+                        <key>PATH</key>
+                        <string>/bin:/usr/bin</string>  
+                        <key>_</key>
+                        <string>/usr/bin/env</string>
+                        <key>HOME</key>
+                        <string>/Users/Metascene</string>
+                </dict>
+                <key>Label</key> 
+                <string>io.ossia.score</string>
+                <key>Program</key>
+                <string>/Users/Metascene/oara/run-boot-macos.sh</string>
+                <key>ProcessType</key> 
+                <string>Interactive</string>
+                <key>RunAtLoad</key>
+                <true/>
+                <key>KeepAlive</key>
+                <true/>
+                <key>Nice</key>
+                <integer>-20</integer>
+                <key>UserName</key>
+                <string>Metascene</string>
+                <key>WorkingDirectory</key>
+                <string>/Users/Metascene</string>
+                <key>LimitLoadToSessionType</key>
+                <string>Aqua</string><key>StandardErrorPath</key>
+<string>/tmp/local.job.err</string>
+<key>StandardOutPath</key>
+<string>/tmp/local.job.out</string> 
+        </dict>
+</plist>
