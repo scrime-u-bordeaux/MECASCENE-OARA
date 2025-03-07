@@ -73,5 +73,6 @@ export SCORE_AUDIO_BACKEND=dummy
 export SCORE_DISABLE_AUDIOPLUGINS=1
 export SCORE_DISABLE_LV2=1
 export SCORE_DISABLE_LIBRARY=1
+export SCORE_AUDIO_DECODING_METHOD=libav_ram
 exec "/Applications/ossia score.app/Contents/MacOS/ossia score" /Users/Metascene/oara/phone-control-entrypoint.score --autoplay --no-gui 
 
